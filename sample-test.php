@@ -1,25 +1,25 @@
 <?php 
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "xdi-portal";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "xdi-portal";
 
-// $mysqli = new mysqli($servername,$username,$password,$dbname);
+$mysqli = new mysqli($servername,$username,$password,$dbname);
 
-// $loadfile="Gl_Records.csv";
+$loadfile="Gl_Records.csv";
 
-// $i=0;
-// $path= $loadfile;
-// $linesCount = file($path, FILE_SKIP_EMPTY_LINES);
+$i=0;
+$path= $loadfile;
+$linesCount = file($path, FILE_SKIP_EMPTY_LINES);
 
-// $rh = fopen($path, 'rb');        
-// if($rh===false) {
-	// return true;
-// }
+$rh = fopen($path, 'rb');        
+if($rh===false) {
+	return true;
+}
 
-// while (($data=fgetcsv($rh,10000,',')) !== false) {
-	// if($data[0] != ""){
+while (($data=fgetcsv($rh,10000,',')) !== false) {
+	if($data[0] != ""){
 		// $checkMatchedPartners = $mysqli->query('SELECT * FROM  xdi_engagement_matched_partners WHERE emp_excel_name = "'.trim($data[0]).'" AND emp_status = 0');
 		// if($checkMatchedPartners->num_rows > 0) {
 			// foreach($checkMatchedPartners as $matchedVal){
@@ -29,18 +29,19 @@
 		// else{
 			// echo $data[0].'<br/>';
 		// }
-		// $i++;
-		// if(count($linesCount) == $i){
-			// echo "Upload completed.";
-		// }
-	// }
-// }
-// fclose($rh);
-
-$a = 'How are you?';
-
-if (strpos($a, 'are') !== false) {
-    echo 'true';
+		echo $data[0].'<br/>';
+		$i++;
+		if(count($linesCount) == $i){
+			echo "Upload completed.";
+		}
+	}
 }
+fclose($rh);
+
+// $a = 'How are you?';
+
+// if (strpos($a, 'are') !== false) {
+    // echo 'true';
+// }
 
 ?>
