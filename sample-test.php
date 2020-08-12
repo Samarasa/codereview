@@ -1,12 +1,5 @@
 <?php 
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "xdi-portal";
-
-// $mysqli = new mysqli($servername,$username,$password,$dbname);
-
 $loadfile="Gl_Records.csv";
 
 $i=0;
@@ -38,10 +31,10 @@ while (($data=fgetcsv($rh,10000,',')) !== false) {
 }
 fclose($rh);
 
-// $a = 'How are you?';
+$a = 'How are you?';
 
-// if (strpos($a, 'are') !== false) {
-    // echo 'true';
-// }
+if (strpos($a, 'are') !== false) {
+    echo 'true';
+}
 
 ?>
