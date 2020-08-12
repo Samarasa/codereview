@@ -1,11 +1,11 @@
 <?php 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "xdi-portal";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "xdi-portal";
 
-$mysqli = new mysqli($servername,$username,$password,$dbname);
+// $mysqli = new mysqli($servername,$username,$password,$dbname);
 
 $loadfile="Gl_Records.csv";
 
